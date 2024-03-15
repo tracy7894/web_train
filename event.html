@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0” />
+        <meta charset="utf-8" />
+        <title>js</title>
+        <style>
+            .btn{
+                background-color: mistyrose;
+                padding: 5px;border-radius: 10px;
+                cursor: pointer;
+            }
+        </style>
+
+    </head>
+    <script >
+        function over(elem){
+            elem.style.background='#bbbbbb'
+        }
+        function out(elem){
+            elem.style.background='mistyrose';
+        }
+        function down(elem){
+            elem.style.fontWeight='bold';
+        }
+        function up(elem){
+            elem.style.fontWeight='normal';
+        }
+    </script>
+    <body>
+        <h3>事件處理</h3>
+        <button class="btn" onmouseover="over(this);"
+        onmouseout="out(this);"
+        onmouseup="up(this)"
+        onmousedown="down(this)"
+        >press</button>
+    </body>
+</html>

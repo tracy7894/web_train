@@ -1,0 +1,28 @@
+<html> <head>
+    <meta name="viewport" content="width=device-width, initial-scale-1.0' /> 
+    <meta charset="utf-8" />
+    <title>Javascript HTML DOM 網頁操作</title>
+    </head> 
+    <body> 
+        <div>
+            <span onclick="chan();">關於我</span>
+            <span onclick="change();">學經歷</span>
+        </div> 
+        <hr/>
+     <div id="about">大家好，我是彭彭</div>
+     <div id='exp' style="display: none;"> 我是心理系畢業，後來當軟體工程師</div>
+     <script>
+            let about=document.querySelector('#about');
+             let exp=document.querySelector('#exp');
+             function change(){
+                about.style.display='none';
+                exp.style.display='block'
+        }
+        function chan(){
+            about.style.display='block'
+                exp.style.display='none';
+               
+        }
+     </script>
+    </body>
+     </html>

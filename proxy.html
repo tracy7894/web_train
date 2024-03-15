@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width"initial-scale=1.0” />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content= "IE=edge">
+        <title>js</title>
+
+
+    </head>
+    <script>
+        let data={
+            price:200,
+            count:5,
+            
+        };
+        let proxy=new Proxy(data,{
+            get:function(target,property){//使用代理物件取得屬性資料的時候，會對應的函式
+               // console.log("代理的目標物件",target);
+               // console.log('想要取得的屬性名稱',property);
+                if(property=='total'){
+                    return target.price*target.count;
+            }
+            else{
+                return target[property];
+            }
+        }
+        });
+        console.log(proxy.total);
+        console.log(proxy.price);
+    </script>
+    <body>
+        
+    </body>
+</html>

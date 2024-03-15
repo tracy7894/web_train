@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0” />
+        <meta charset="utf-8" />
+        <title>js</title>
+    </head>
+    <script>
+
+        //  
+        function getData(){
+            fetch('https://cwpeng.github.io/live-records-samples/data/products.json').then(function(response){
+              //  console.log(response);
+              return response.json();
+            }).then(function(data){
+                let a=document.querySelector('#a');
+                a.innerHTML=' ';
+                for(let i=0;i<data.length;i++){
+                    let p=data[i];
+                    a.innerHTML+='<div>'+p.name+','+p.price+','+p. description+"<div>"
+                }
+             
+                console.log(data);
+            });
+        }
+      </script>
+    <body>
+        <h3>ajax</h3>
+        <button onclick="getData();">press</button>
+        <div id="a"></div>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width"initial-scale=1.0” />
+        <meta charset="utf-8" />
+        <title>js</title>
+        <link rel="stylesheet" type="text/css" href="rwd.css"/>
+
+    </head>
+    <script>
+        //shallow copy
+        let a=[0,1,{x:2,y:3}];
+        let b=[...a];//==object.assign([],a)
+       // b[0]=10;
+       // console.log(a[0]);
+      //  b[2].x=20;
+        //console.log(a[2].x);
+       // let str=JSON.stringify(a); deep copy
+        let c=JSON.parse(JSON.stringify(a));
+        c[0]=10;
+        console.log(a[0]);
+        c[2].x=20;
+        console.log(a[2].x);
+    </script>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,51 @@
+.head{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.pc-menu{
+    text-align: center;
+    display: block;
+}
+.menu{
+    text-align: center;
+    display: none;
+}
+.list{
+    display: flex;
+    justify-content: center;
+}
+.product{
+    flex: none;
+    width: 20%;
+    margin: 10px;
+    background-color: lightpink;
+}
+
+
+@media  (max-width: 1250px){
+    .list{
+        flex-wrap: wrap;
+
+    }
+    .product{
+        width: 45%;
+
+    }
+}
+@media  (max-width: 500px){
+    .head{
+        font-size: 20px;
+    }
+    .pc-menu{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .product{
+        width: 90%;
+        
+    }
+}
